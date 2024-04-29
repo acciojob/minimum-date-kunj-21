@@ -1,5 +1,10 @@
 function minDate(dates) {
   //write you code here
+	const dateObjects = dates.map(dateStr => new Date(dateStr));
+const minDate = new Date(Math.min.apply(null, dateObjects));
+const formattedMinDate = minDate.getFullYear() + '/' + ('0' + (minDate.getMonth() + 1)).slice(-2) + '/' + ('0' + minDate.getDate()).slice(-2);
+return formattedMinDate;
+
 }
 
 // Do not change the code
